@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>
+		Maze Game Level 5
+		</title>
+	</head>
+	<body><center>
+		<table width="75%" height=75%>
+			<tr>
+				<td colspan="4">
+				<img src="maze5.jpg" alt="Mountain View" style="width:75%;height:75%">
+				</td>
+				<td>
+					<form method="post" action="L6.html">
+					<center>
+					<table>
+						<tr>
+					    <td> <h3>LEVEL 5</h3> </td>
+						</tr>
+						<tr>
+						<td>
+						<h2> RESULT : </h2><input type="text" id="r1" value=""  name="result" />
+						</td>
+						</tr>
+						
+						<tr>
+						<td>
+						<button onclick="Write(this);return false" value="L"  >LEFT</button>    <button onclick="Write(this); return false;" value="R" >RIGHT</button>
+						<script>
+						function Write(id) { 
+						var l_r=id.value;
+	                    var result=document.getElementById("r1");
+						r1.value=r1.value+l_r;
+						}
+function go(){
+ var resul=document.getElementById("r1");
+if(resul.value=="LRLRRLRLR")
+{document.getElementById("nxt").disabled=false;
+return true;}
+else
+document.getElementById("nxt").disabled=true;
+r1.value="level failed";
+return false;
+}
+            function link()
+            {
+
+                window.location = 'L6.html'
+
+            }
+						</script>
+
+						</td>
+						</tr>
+						
+						<tr>
+						<td>
+						<input type="submit" value="Submit" onclick="go(this);return false;" action="L6.html">
+						<input type="reset" value ="reset">
+					       <button onclick="link()" id="nxt" disabled>Next Level</button>
+						</td>
+						</tr>
+
+						
+					</table>
+					</center>
+					</form>
+				</td>
+			</tr>
+		</table></center>
+	</body>
+</html>
